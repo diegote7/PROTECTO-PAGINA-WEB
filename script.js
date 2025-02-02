@@ -8,5 +8,10 @@ cargarEventListeners();
 function cargarEventListeners() {
     elementos1.addEventListener("clik", comprarElemento);
     carrito.addEventListener("clik", eliminarElemento);
-    vaciarCarritoByn
+    vaciarCarritoByn.addEventListener("click", vaciarCarrito);
+}
+
+function comprarElemento(e) {
+    e.preventDefault();
+    if.(e.target.classList.contains("agregar-carrito"))
 }
