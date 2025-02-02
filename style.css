@@ -6,12 +6,14 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-
 }
 
-body{
-    font-family: "Poppins", serif;font-weight: 100;font-style: normal;
-
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #f7efd8; /* Color de fondo uniforme para toda la página */
+    color: #333128; /* Color de texto principal */
 }
 
 img {
@@ -21,17 +23,20 @@ img {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .header {
-    background-color: #f7efd8;
+    background-color: #f7efd8; /* Mismo color de fondo que el body */
     display: flex;
+    justify-content: center;
     align-items: center;
-    min-height: 70vh;
-    padding: 100% 0;
+    min-height: 100vh;
+    padding: 100px 0; /* Corregido: era 100% 0, lo cual es incorrecto */
+    text-align: center;
 }
 
-.menu{
+.menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,10 +44,181 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
+    background-color: #f7efd8; /* Mismo color de fondo que el body */
 }
 
 .logo {
     color: #8dc84b;
     font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
 
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #333128;
+    display: block;
+    font-weight: 600;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    margin-top: 10px;
+    z-index: 1;
+    background-color: rgba(78, 75, 80, 0.5); /* Corregido: faltaba el paréntesis de cierre */
+    padding: 20px;
+    min-width: 400px;
+}
+
+table {
+    width: 100%; /* Corregido: era 100px, lo cual es demasiado pequeño */
+}
+
+th {
+    color: #ffffff;
+}
+
+.borrar {
+    background-color: #8dc848;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-weight: 800; /* Corregido: se eliminó el "px" */
+    cursor: pointer;
+}
+
+/* Estilos para las secciones */
+.information, .general {
+    background-color: #f7efd8; /* Mismo color de fondo que el body */
+    padding: 40px 0;
+}
+
+.information-content, .general-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-1, .information-1 {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px); /* Ajuste para tarjetas responsivas */
+}
+
+.information-txt, .general-txt {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btn-1, .btn-2 {
+    background-color: #8dc84b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover, .btn-2:hover {
+    background-color: #7bb042;
+}
+
+/* Ajustes para los logos de información */
+.information-1 img {
+    display: block;
+    margin: 0 auto 15px auto; /* Centra el logo y añade margen inferior */
+    width: 50px; /* Ajusta el tamaño del logo si es necesario */
+    height: auto;
+}
+
+.information-1 h3 {
+    text-align: center;
+    margin-top: 10px; /* Añade un margen superior al título */
+}
+
+.information-1 p {
+    text-align: center;
+    margin-top: 10px; /* Añade un margen superior al párrafo */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+}
+
+.header-txt {
+    margin-bottom: 20px; /* Espacio entre la frase y la imagen */
+}
+
+.header-txt h1 {
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #333128; /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+}
+
+.header-txt p {
+    font-size: 1.2rem; /* Tamaño del párrafo */
+    color: #333128; /* Color del texto */
+    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+}
+
+.header-txt .btn-1 {
+    background-color: #8dc84b; /* Color del botón */
+    color: #ffffff; /* Color del texto del botón */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.header-txt .btn-1:hover {
+    background-color: #7bb042; /* Color del botón al pasar el mouse */
+}
+
+.header-img img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
 }
